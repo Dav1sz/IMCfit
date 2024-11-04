@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <link rel="icon" href="img/Capturar-removebg-preview.png">
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I.M.C</title>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <img src="img/Capturar-removebg-preview.png" alt="" class="logo">
+            <p>Inicio</p>
+            <p>Saúde</p>
+            <p>Planos</p>
+            <p>Sobre</p>
+        </nav>
+    </header>
+
+    <section class="inicio" id="inicio">
+        <div class="container-inicio">
+            <div class="pagina-inicio">
+                <div class="eu">
+                    <h2>Bem-vindo à IMCfit! Onde a Sua Jornada Fitness Começa!</h2>
+                    <h1><span class="davi"> Nosso objetivo é ajudá-lo a atingir sua melhor forma e a alcançar suas metas
+                            de saúde e bem-estar. Oferecemos uma estrutura moderna, equipada com aparelhos de última
+                            geração, aulas dinâmicas e uma equipe de profissionais qualificados, sempre prontos para
+                            orientar e motivar você em cada etapa do seu treino.</span></h1>
+                    <h3>Seja fit!</h3>
+                        <a class="linkdin" href="https://www.linkedin.com/in/davi-dos-santos-m/">Contate-nos</a>
+                </div>
+                
+            </div>
+            
+        </div>
+        <div class="foto"></div>
+    </section>
+
+   
+
+    <h1>Faça seu Indice de Massa Corporal</h1>
+
+    <div class="botao">
+        <label for="peso">Peso (KG)</label>
+        <input type="number" id="peso" name="peso">
+        <br>
+
+        <label for="altura">Altura (CM)</label>
+        <input type="number" id="altura" name="altura">
+        <br>
+
+        <br>
+        <button onclick="calcularImc()">Calcular IMC</button>
+        <br>
+        <br>
+    </div>
+
+    <p>Seu índice de massa corporal é: <span id="resultado"></span></p>
+
+    <script>
+        function calcularImc() {
+            const peso = window.document.getElementById("peso").value;
+            const altura = window.document.getElementById("altura").value;
+            const imc = peso / (altura ** 2);
+            document.getElementById("resultado").textContent = imc.toFixed(2)
+        }
+
+        let tituloDinamico = document.title;
+        window.addEventListener("blur", () => {
+            document.title = "IMCFIIIT!!!!"
+        })
+        window.addEventListener("focus", () => {
+            document.title = tituloDinamico
+        })
+
+    </script>
+
+
+    <footer>
+        <h1>Sobre</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui ipsa, quasi ratione consequuntur iusto atque
+            voluptatem deleniti saepe doloribus aperiam tempora natus molestias quod tenetur voluptas nisi amet ullam
+            iste!Lorem
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui ipsa, quasi ratione consequuntur iusto atque
+            voluptatem deleniti saepe doloribus aperiam tempora natus molestias quod tenetur voluptas nisi amet ullam
+            iste!Lorem</p>
+    </footer>
+    <!-- <footer>
+        <p>XXX - <span>ZZZ</span></p>
+    </footer> -->
+
+</body>
+
+</html>
